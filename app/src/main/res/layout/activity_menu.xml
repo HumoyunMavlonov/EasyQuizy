@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#327AE3"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EASY QUIZY"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/brain"
+        android:fontFamily="casual"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/brain"
+        app:layout_constraintBottom_toTopOf="@id/guid2"
+        android:src="@drawable/brain"
+        tools:ignore="MissingConstraints" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/guid2"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_card_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:src="@drawable/img_5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/playbtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_menu"
+            android:text="Play"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/guid1"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/aboutbtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_menu"
+            android:text="About"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/guid1"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            android:textStyle="bold"
+            android:textSize="20dp"
+
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65"
+            android:id="@+id/guid1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29"
+        android:id="@+id/guid2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
